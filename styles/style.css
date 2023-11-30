@@ -19,7 +19,7 @@
 
 
 .header {
-  block-size: auto;
+  block-size: 100vh;
   inline-size: 100%;
   display: grid;
   grid-template-rows: auto;
@@ -81,10 +81,6 @@
   justify-content: end;
 }
 
-.header__theme-menu-item {
-
-}
-
 .header__theme-menu-button {
   inline-size: 70px;
   block-size: 26px;
@@ -99,21 +95,9 @@
 
 }
 
-.header__theme-menu-button_type_light {
-
-}
-
 .header__theme-menu-button_active {
   border: 1px solid currentColor;
   pointer-events: none;
-
-}
-
-.header__theme-menu-button_type_auto {
-
-}
-
-.header__theme-menu-button_type_dark {
 
 }
 
@@ -194,7 +178,7 @@
 }
 
 footer {
-  height: 97.1vh;
+  height: 100vh;
   display: grid;
   justify-content: center;
   align-items: center;

@@ -43,7 +43,7 @@
 }
 
 @media (1024px <= width) {
-  :root .page.theme_dark{
+  :root .page.theme_dark {
     --main-title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
