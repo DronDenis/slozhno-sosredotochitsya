@@ -399,6 +399,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: min-content min-content min-content min-content;
+    gap: 10px;
   }
 
   .title__medium-width__columns-top {
@@ -421,6 +422,11 @@ footer {
     gap: 10px 20px;
   }
 
+
+  .grid__rows .title__accent-bg {
+    margin-block-start: 0;
+  }
+  
   .grid__rows > h2 {
     grid-column: 1/2;
     grid-row: 1/2;
@@ -458,6 +464,10 @@ footer {
   .title__medium-width__columns-bottom {
     grid-column: 1/2;
     grid-row: 1/12;
+  }
+
+  .footer__title {
+    margin-inline-start: 0;
   }
 
 }

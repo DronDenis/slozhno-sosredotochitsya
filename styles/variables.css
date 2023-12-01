@@ -30,3 +30,7 @@
     visibility: hidden;
   }
 }
+
+.page.theme_light .dark__theme__indicator {
+  visibility: hidden;
+}
