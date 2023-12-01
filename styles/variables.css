@@ -17,6 +17,7 @@
   --text-line-height: 23.4px;
   --theme-button-line-height: 18px;
   --header-image: url(../images/cover-image-dark.png);
+  --hover-border-color: rgba(255, 0, 112, 0.40);
 }
 
 @media (1024px <= width) {
