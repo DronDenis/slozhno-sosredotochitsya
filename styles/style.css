@@ -8,7 +8,6 @@ body {
 .page {
   block-size: auto;
   background-color: var(--bg-color);
-  padding: 10px;
   font-family: var(--font-family);
   font-size: var(--font-size);
   line-height: var(--text-line-heigh);
@@ -17,18 +16,17 @@ body {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
 
 
 .header {
+  padding: 10px;
   block-size: 100vh;
   inline-size: 100%;
   display: grid;
   grid-template-rows: auto;
-  padding-block-end: 10px;
 }
 
 .decorated-zone {
@@ -40,8 +38,8 @@ body {
 .decorated-zone::before {
   content: "";
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 10px;
+  top: 10px;
   inline-size: 25px;
   block-size: 25px;
   border-top: 1px solid var(--title-color);
@@ -51,8 +49,8 @@ body {
 .decorated-zone::after {
   content: "";
   position: absolute;
-  bottom: 20px;
-  left: 0;
+  bottom: 10px;
+  left: 10px;
   inline-size: 25px;
   block-size: 25px;
   border-left: 1px solid var(--title-color);
@@ -61,8 +59,8 @@ body {
 
 .dark__theme__indicator {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 10px;
+  top: 10px;
   color: var(--title-color);
   text-transform: uppercase;
   line-height: 25px;
@@ -131,16 +129,17 @@ body {
 
 }
 
+.main {
+  display: grid;
+  gap: 50px;
+  margin-block: 40px;
+}
+
 .section {
-  margin-block-start: 50px;
-  margin-block-end: 10px;
+  padding-inline: 10px;
   display: grid;
   grid-template-rows: auto;
   gap: 10px;
-}
-
-.section:first-of-type {
-  margin-block-start: 30px;
 }
 
 .title__accent-color {
@@ -184,30 +183,38 @@ body {
   block-size: auto;
 }
 
-.main {
-  padding-block-end: 11.5%;
-}
-
 footer {
   height: 100vh;
   display: grid;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 
 .footer__title {
   text-shadow: 2px 2px 0 var(--main-title-shaddow-color);
   inline-size: 100%;
-  padding-block-end: 2.5vh;
 }
 
 @media (768px <= width < 1024px) {
-  .page {
+
+  .header {
     padding: 20px;
   }
 
   .decorated-zone::after {
-    bottom: 40px;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .dark__theme__indicator {
+    top: 20px;
+    right: 20px;
   }
 
   .main__title {
@@ -216,20 +223,21 @@ footer {
 
   .header__theme-menu {
     margin-block-start: 16.7vh;
-    margin-block-end: -1.5vh;
+    margin-block-end: 1vh;
   }
 
   .text__header {
     justify-self: end;
-    margin-block-start: -3vh;
+    margin-block-start: 0;
   }
  
   .main {
-    padding-block-end: 11%;
+    margin-block: 60px;
+    gap: 80px;
   }
 
   .section {
-    margin-block-start: 70px;
+    padding-inline: 20px;
   }
 
   .grid__columns {
@@ -251,8 +259,6 @@ footer {
   .grid__rows {
     grid-template-columns: min-content 1fr;
     grid-template-rows: min-content min-content min-content min-content min-content min-content min-content;
-    margin-block-start: 80px;
-
   }
 
   .grid__rows > h2 {
@@ -269,14 +275,18 @@ footer {
     grid-row: 1/12;
   }
   
+  .title__medium-width__columns-bottom + h3 {
+    margin: 0;
+  }
+
+
   .section__images {
     display: grid;
     gap: 20px;
-    padding-block-start: 10px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: min-content min-content min-content min-content;
     margin-inline-end: -20px;
-    margin-block-end: 0%;
+    margin-block-end: 0;
   }
   
   .title__grid-position {
@@ -331,10 +341,11 @@ footer {
   }
   .footer {
     height: 100vh;
+    padding: 20px;
   }
 
   .footer__title {
-    margin-block-end: 1.5vh;
+    margin-block-end: 0;
     margin-inline-start: 0;
   }
 }
@@ -344,12 +355,23 @@ footer {
     --main-title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
-  .page {
+  .header {
     padding: 20px;
   }
 
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
   .decorated-zone::after {
-    bottom: 40px;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .dark__theme__indicator {
+    top: 20px;
+    right: 20px;
   }
 
   .main__title {
@@ -358,7 +380,7 @@ footer {
 
   .header__theme-menu {
     margin-block-start: 0;
-    margin-block-end: 16.9vh;
+    margin-block-end: 20.5vh;
   }
 
   .header__theme-menu-list {
@@ -369,16 +391,17 @@ footer {
 
   .text__header {
     max-inline-size: 491px;
-    margin-block-start: -4.2vh;
+    margin-block-start: 0;
     justify-self: end;
   }
 
   .main {
-    padding-block-end: 8%;
+    margin-block: 60px;
+    gap: 80px;
   }
 
   .section {
-    margin-block-start: 70px;
+    padding-inline: 20px;
   }
 
   .grid__columns {
@@ -390,14 +413,12 @@ footer {
   .title__medium-width__columns-top {
     grid-column: 1/2;
     grid-row: 1/5;
-    padding-top: 10px;
   }
 
   .grid__rows {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: min-content min-content min-content;
-    padding-block-start: 10px;
     gap: 10px 20px;
   }
 
@@ -438,13 +459,11 @@ footer {
   .title__medium-width__columns-bottom {
     grid-column: 1/2;
     grid-row: 1/12;
-    margin-block-start: 10px;
   }
 
   .section__images {
     display: grid;
     gap: 20px;
-    padding-block-start: 10px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: min-content min-content min-content min-content;
     margin-inline-end: -20px;
@@ -503,10 +522,11 @@ footer {
   }
   .footer {
     height: 100vh;
+    padding: 20px;
   }
 
   .footer__title {
     margin-inline-start: 0;
-    margin-block-end: 2vh;
+    margin-block-end: 0;
   }
 }
