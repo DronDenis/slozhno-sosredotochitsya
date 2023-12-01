@@ -101,6 +101,10 @@ body {
   color: var(--title-color);
 }
 
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
 .header__theme-menu-button:focus-visible {
   border-bottom: 1px solid currentColor;
 }
@@ -176,6 +180,10 @@ body {
 .text__link {
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--main-title-shaddow-color);
+}
+
+.text__link:focus {
+  outline: none;
 }
 
 .text__link:focus-visible {
