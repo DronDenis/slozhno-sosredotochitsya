@@ -92,7 +92,7 @@ body {
   inline-size: 70px;
   block-size: 26px;
   text-align: center;
-  padding-block-start: -1px;
+  padding-block-start: 1px;
   padding-block-end: 4px;
   background-color: transparent;
   border: none;
