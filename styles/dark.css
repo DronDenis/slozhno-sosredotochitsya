@@ -3,24 +3,6 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root.theme-dark {
-  --accent-color: #ff0070;
-  --main-title-color: #db00ff;
-  --main-title-shaddow-color: #ff0070;
-  --title-color: #ff0070;
-  --bg-color: #000028;
-  --text-color: #f1b2ce;
-  --accent-text-color: #000028;
-  --main-title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --font-size: 18px;
-  --font-family: 'IBM Plex Mono', serif;
-  --title-line-height: 82.5%;
-  --text-line-height: 23.4px;
-  --theme-bottom-line-height: 18px;
-  --header-image: url(../images/cover-image-dark.png);
-  --hover-border-color: rgba(255, 0, 112, 0.40);
-}
-
 .page.theme_dark {
   --accent-color: #ff0070;
   --main-title-color: #db00ff;
@@ -29,12 +11,6 @@
   --bg-color: #000028;
   --text-color: #f1b2ce;
   --accent-text-color: #000028;
-  --main-title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --font-size: 18px;
-  --font-family: 'IBM Plex Mono', serif;
-  --title-line-height: 82.5%;
-  --text-line-height: 23.4px;
-  --theme-bottom-line-height: 18px;
   --header-image: url(../images/cover-image-dark.png);
   --hover-border-color: rgba(255, 0, 112, 0.40);
   /* сохраните этот селектор в приведённом виде.
@@ -43,13 +19,17 @@
   */
 }
 
-@media (1024px <= width) {
-  :root .page.theme_dark {
-    --main-title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: #ff0070;
+    --main-title-color: #db00ff;
+    --main-title-shaddow-color: #ff0070;
+    --title-color: #ff0070;
+    --bg-color: #000028;
+    --text-color: #f1b2ce;
+    --accent-text-color: #000028;
+    --header-image: url(../images/cover-image-dark.png);
+    --hover-border-color: rgba(255, 0, 112, 0.40);
   }
+  
 }
-
-.dark__theme__indicator {
-  visibility: visible;
-}
-

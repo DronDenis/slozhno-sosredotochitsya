@@ -20,17 +20,9 @@
   --hover-border-color: rgba(255, 0, 112, 0.40);
 }
 
-@media (1024px <= width) {
+@media (768px <= width) {
+
   :root {
     --main-title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
-}
-@media (prefers-color-scheme: light) {
-  .page.theme_auto .dark__theme__indicator {
-    visibility: hidden;
-  }
-}
-
-.page.theme_light .dark__theme__indicator {
-  visibility: hidden;
 }
