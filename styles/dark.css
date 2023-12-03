@@ -18,18 +18,3 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --accent-color: #ff0070;
-    --main-title-color: #db00ff;
-    --main-title-shaddow-color: #ff0070;
-    --title-color: #ff0070;
-    --bg-color: #000028;
-    --text-color: #f1b2ce;
-    --accent-text-color: #000028;
-    --header-image: url(../images/cover-image-dark.png);
-    --hover-border-color: rgba(255, 0, 112, 0.40);
-  }
-  
-}
