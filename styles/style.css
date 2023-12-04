@@ -266,7 +266,6 @@ footer {
 
   .text__header {
     justify-self: end;
-    margin-block-start: 0;
   }
  
   .main {
@@ -356,7 +355,6 @@ footer {
 
   .footer__title {
     margin-block-end: 0;
-    margin-inline-start: 0;
   }
 }
 
@@ -401,9 +399,5 @@ footer {
 
   .street {
     padding-block-start: 5px;
-  }
-
-  .footer__title {
-    margin-inline-start: 0;
   }
 }
